@@ -1,53 +1,45 @@
 # Calculator Web App
 
-This repository contains a simple calculator web application built using Flask, with a frontend designed using HTML, CSS, and JavaScript. The application features a green and blue theme and supports basic arithmetic operations along with some advanced functions like square root and square.
+This is a simple calculator web application with a red and black color theme. The application is built using Flask for the backend and HTML/CSS with JavaScript for the frontend.
 
 ## Features
-- Basic Arithmetic Operations: Addition, Subtraction, Multiplication, Division
-- Advanced Functions: Square Root and Square
-- Responsive Design with Green and Blue Theme
+
+- Basic arithmetic operations
+- Responsive design
+- Enhanced accessibility features
 
 ## Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```sh
    git clone https://github.com/Alfa-Aaradhya/calculator_web_app.git
+   ```
+2. Navigate to the project directory:
+   ```sh
    cd calculator_web_app
    ```
-
-2. **Set up the environment:**
-   Ensure you have Python and Flask installed. You can set up a virtual environment for better package management:
+3. Build the Docker image:
    ```sh
-   python -m venv venv
-   source venv/bin/activate # On Windows use `venv\Scripts\activate`
-   pip install flask
+   docker build -t calculator-web-app .
+   ```
+4. Run the Docker container:
+   ```sh
+   docker run -p 5000:5000 calculator-web-app
    ```
 
-3. **Run the application:**
-   ```sh
-   flask run
-   ```
+## Usage
 
-4. **Visit the application**
-   Open `http://localhost:5000` in your web browser to use the calculator.
+- Access the app at [http://localhost:5000](http://localhost:5000)
 
-## Docker Deployment
-- The application can be containerized using Docker for consistent development and testing environments.
+## Accessibility & Usability Enhancements
 
-  ```sh
-  docker build -t calculator-web-app .
-  docker run -d -p 5000:5000 calculator-web-app
-  ```
-
-## Public Access
-- Use ngrok to expose the local web server to the internet:
-
-  ```sh
-  ngrok http 5000
-  ```
+- Updated for better accessibility according to modern web design practices.
+- Simple, intuitive user interface.
 
 ## Contributing
-Feel free to submit issues or pull requests with suggestions or improvements.
+
+Feel free to submit pull requests or open issues for potential improvements. We appreciate community collaboration!
 
 ## License
+
 This project is licensed under the MIT License.
